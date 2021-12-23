@@ -11,6 +11,7 @@ You must have STM32CubeIde installed as well as STM32CubeProgrammer
 - a CP2102 USB-Serial converter,
 - an Encoder (here I used a cheap E38S6G5-600B-G24N encoder)
 - a led (I used a led with **integrated resistor**)
+- and obviously a BluePill module
 
 # Connections:
 | CP2102 | BluePill | Encoder | Led |
