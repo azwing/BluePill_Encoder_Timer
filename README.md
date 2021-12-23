@@ -1,22 +1,25 @@
-**BluePill_Encoder_Timer**
+# BluePill_Encoder_Timer
 
-Just a attempt to program the Bluepill with the STM32CubeIde
-Using the timer Encoder Mode functionality to read a rotary encoder
-There is no great idea behind but if it can help ...
+# Description
+Connectiong an encoder to a BluePill and using the Timer Encoder Mode capabitily to read a prosition.
+It is also a trial for me to learn how to use the STM32CubeIde and other STM tools.
 
-it uses a CP2102 to communicate via USB to Computer and a E38S6G5-600B-G24N encoder and a Led + integrated PC13 Led
+# Prerequisities
+You must have STM32CubeIde installed as well as STM32CubeProgrammer
 
-Connections:
-**CP2102**\
-5V --> Encoder Vcc\
-Gnd	--> Gnd\
-Txd	--> BluePill PA10\
-Rxd --> BluePill PA9\
-**Encoder**\
-Vcc -->	CP2102 5V\
-Gnd --> Gnd\
-A -->	BluePill PA0\
-B --> BluePill PA0\
-**LED**\
-Cathode --> BluePill PA6\
-Anode --> Gnd\
+# Hardware needed
+- a CP2102 USB-Serial converter,
+- an Encoder (here I used a cheap E38S6G5-600B-G24N encoder)
+- a led (I used a led with **integrated resistor**)
+
+# Connections:
+| CP2102 | BluePill | Encoder | Led |
+| :----- | :------: | :-----: | ---:|
+| 5v     | nc       | Vcc     | nc  |
+| Gnd    |          | Gnd     | -   |
+| Txd    | PA9      | nc      | nc  |
+| Rxd    | PA10     | nc      | nc  |
+| nc     | PA0      | A       | nc  |
+| nc     | PA1      | B       | nc  |
+| nc     | PA6      | nc      | +   |
+
